@@ -711,3 +711,103 @@ def doskonala(n):
             print(int(x), end=" ")
 
 doskonala(28)
+
+===========================================================================STRINGI=================================================
+
+napisz = "Skoda Octavia 4  Rok 2021 przebieg 110500km  2.0tdi 115hp ( po programie na 166hp)  Auto sprowadzone z Austrii osobiście w lipcu 2024."
+print(len(napisz))
+print(napisz[12])
+print(napisz[14])
+print(napisz[-4])
+print(napisz[12], napisz[14], napisz[-4], sep="")
+
+print(napisz * 2)
+print(napisz + '2')
+# print(napisz - '2')
+# print(napisz % 2)
+
+print(napisz.lower())
+
+a = "Łukasz Smugorzewski"
+b = a[0:6]
+c = a[7:]
+
+print(b), print(c)
+
+print(c, b)
+
+print(b[0]+c[0])
+print(b.replace('Ł',"S"), c.replace("S","Ł"))
+
+
+# CO DRUGI ZNAK
+
+# def napis(x):
+#     return x[::2]
+#
+# x = input("napisz swój ciąg znaków: ")
+# print(napis(x))
+
+# ODWRÓCENIE x LICZ
+
+# def napis(p,x = 1):
+#     return p[-x:]
+#
+# x = input("napisz swój ciąg znaków: ")
+# print(napis(x))
+
+#ODWRACANIE CALEGO STRINGA
+
+# def napis(p):
+#     return p[::-1]
+#
+# p = input("napisz ile znakow ma zwrocic: ")
+# print(napis(p))
+
+#PALINDROMY
+#
+# def napis(p):
+#     a = p[::-1].strip()
+#     if a == p:
+#         print(f"twoje zdanie {p} jest palindromem")
+#     else:
+#         print(f"twoje zdanie {p} nie jest palindromem")
+
+napis("wow mega")
+
+# def napis(p,x):
+#     a = p.count(x)
+#     return a
+#
+# p = input("napisz swój napis: ")
+# x = input("napisz jaką litere mamy sprawdzić: ")
+# print("twoja litera wystąpiłą", napis(p,x),"razy")
+
+
+ #zad 6 PODPUNKT A
+#def szyfr(wyraz,przesun):
+#    szyfrogram = ''
+#    odszyfruj = ''
+#    for znak in wyraz:
+#        szyfrogram += chr(ord(znak)+przesun)
+#    print("zaszyfrowany: ", szyfrogram)
+#    for znak in szyfrogram:
+#        odszyfruj += chr(ord(znak)-przesun)
+#    print("odszyfrowany: ", odszyfruj)
+#szyfr(input("Podaj wyraz: "),2)
+#_--------------------------------------------------------------------------------
+#ZAD 6 PODPUNKT B
+#def mini_szyfrowanie(tekst):
+#    # Konwertujemy tekst na listę znaków dla łatwiejszej manipulacji
+#    znaki = list(tekst)
+#    print (znaki)
+#    # Przestawiamy znaki parami
+#    for i in range(0, len(znaki) - 1):
+#        znaki[i], znaki[i + 1] = znaki[i + 1], znaki[i]
+#    # Łączymy listę znaków z powrotem w ciąg tekstowy
+#    return ''.join(znaki)
+# Przykład użycia
+#tekst = "przyklad"
+#zaszyfrowany = mini_szyfrowanie(tekst)
+#print("Tekst oryginalny:", tekst)
+#print("Tekst zaszyfrowany:", zaszyfrowany)
