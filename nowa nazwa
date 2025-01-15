@@ -632,3 +632,82 @@ print("\n")
 print(f"Suma liczb: {suma2}")
 print(f"Średnia arytmetyczna: {srednia2}")
 
+===============================================================================JAKIES FUNKCJE====================================================
+def pierwsza(n):
+    if n <= 1:
+        return 0
+    for i in range(2,n):
+        if n % i == 0:
+            return 0
+    return 1
+
+def main(n):
+    if pierwsza(n) == 1:
+        print("liczba",n,"jest liczbą pierwszą")
+    else:
+        print("liczba",n ,"nie jest liczbą pierwszą")
+
+main(int(input("wpisz liczbe: ")))
+
+def blizniacze(n = 1000):
+    if pierwsza(n - 3) == 1 and pierwsza(n - 1) == 1:
+        print(f"liczba {n - 3} oraz {n - 1} są liczbami bliźniaczymi")
+    else:
+        print(f"liczba {n - 3} oraz {n - 1} nie są liczbami bliźniaczymi")
+
+blizniacze(1000)
+
+def pierwsza(n):
+    if n <= 1:
+        return 0
+    for i in range(2,n):
+        if n % i == 0:
+            return 0
+    return 1
+
+def blizniacze(n = 1000):
+    for n in range(n, 0, -1):
+        if pierwsza(n - 3) == 1 and pierwsza(n - 1) == 1:
+            print(f"liczba {n - 3} oraz {n - 1} są liczbami bliźniaczymi")
+            break
+
+blizniacze(2000)
+
+def doslonala(n):
+    s = [1] * (n + 1)
+    x = 2
+    while x <= n:
+        if s[n] == n:
+            print(n, "to ejst numer perfektycjny")
+    kn = 2 * n
+    while kn <= n:
+        s[kn] += n
+        kn += n
+    n += 1
+
+doslonala(2)
+
+def potega(x, n):
+    if n == 0:
+        return 1
+    elif n == 1:
+        return x
+    elif n % 2 != 0:
+        wynik = x * potega(x, n - 1)
+        return wynik
+    else:
+        wynik1 = potega(x, n / 2) * potega(x, n / 2)
+        return wynik1
+
+print(potega(5,5))
+
+def doskonala(n):
+    i = 1
+    zmienne = 0
+    while i < n:
+        i += 1
+        if n % i == 0:
+            x = n / i
+            print(int(x), end=" ")
+
+doskonala(28)
