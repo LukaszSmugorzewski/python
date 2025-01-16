@@ -811,3 +811,44 @@ napis("wow mega")
 #zaszyfrowany = mini_szyfrowanie(tekst)
 #print("Tekst oryginalny:", tekst)
 #print("Tekst zaszyfrowany:", zaszyfrowany)
+
+===================≈=========klasy jeszcze=≈==========≈========
+
+# Tworzenie klasy
+class Osoba:
+    # Atrybut klasy (wspólny dla wszystkich obiektów)
+    gatunek = "Homo sapiens"
+
+    # Konstruktor (__init__)
+    def __init__(self, imie, wiek):
+        # Atrybuty instancji
+        self.imie = imie
+        self.wiek = wiek
+
+    # Metoda instancji
+    def przedstaw_sie(self):
+        return f"Cześć, jestem {self.imie} i mam {self.wiek} lat."
+
+    # Metoda specjalna __str__ (reprezentacja tekstowa)
+    def __str__(self):
+        return f"Osoba: {self.imie}, wiek: {self.wiek}"
+
+# Dziedziczenie
+class Pracownik(Osoba):
+    def __init__(self, imie, wiek, stanowisko):
+        # Wywołanie konstruktora klasy bazowej
+        super().__init__(imie, wiek)
+        self.stanowisko = stanowisko
+
+    # Nadpisanie metody
+    def przedstaw_sie(self):
+        return f"Cześć, jestem {self.imie}, mam {self.wiek} lat i pracuję jako {self.stanowisko}."
+
+# Przykład użycia
+osoba = Osoba("Jan", 30)
+print(osoba.przedstaw_sie())  # Wyjście: Cześć, jestem Jan i mam 30 lat.
+print(osoba)  # Wyjście: Osoba: Jan, wiek: 30
+
+pracownik = Pracownik("Anna", 25, "Programista")
+print(pracownik.przedstaw_sie())  # Wyjście: Cześć, jestem Anna, mam 25 lat i pracuję jako Programista.
+print(pracownik)  # Wyjście: Osoba: Anna, wiek: 25
