@@ -1,0 +1,595 @@
+==================================================================================IFY====================================================================
+
+# age = int(input("wprowadz swoj wiek: "))
+# if age >= 18 and age <= 100:
+#     print("autoryzacja uzyskana")
+# else: print("Odmowa")
+#
+# a = int(input("Wprowadz liczbę:"))
+# if a > 0:
+#     print("|a|=", a)
+# else:
+#     print("|a|=", -a)
+
+# a = 50
+# b = 10
+#
+# if a > b:
+#     print("hello world")
+
+# a = float(input("wpisz pierwszą liczbę: "))
+# b = float(input("wpisz drugą liczbę: "))
+#
+# if a > b:
+#     print("liczba", a, "jest największa")
+# else:
+#     print("liczba", b, "jest największa")
+
+# a = int(input("napisz dowolną liczbę: "))
+# if a >= 1 and a <= 10:
+#     print("twoja liczba znajduje się w przedziale liczb od 1 do 10")
+# elif a >= 17 and a <= 21:
+#     print("twoja liczba znajduje się w przedziale liczb od 17 do 21")
+# else:
+#     print("twoja liczba nie znajduje sie w żadnym przedziale liczbowym")
+
+# a = int(input("wpisz dowolną liczbę: "))
+# if a % 3 == 0 and a % 5 == 0:
+#     print("twoja liczba jest podzielna przez 3 i przez 5")
+# elif a % 3 == 0 and a % 5 != 0:
+#     print("twoja liczba jest podzielna przez 3 ale nie przez 5")
+# elif a % 3 != 0 and a % 5 == 0:
+#     print("twoja liczba jest podzielna przez 5 ale nie przez 3")
+# elif a % 3 != 0 and a % 5 != 0:
+#     print("twoja liczba nie jest podzielna ani przez 3, ani przez 5")
+
+# a = int(input("wpisz pierwszą liczbę: "))
+# b = int(input("wpisz drugą liczbę: "))
+# c = input("napisz znak (+, -, :, *): ")
+#
+# if c == "+" :
+#     print("wynik dodawania liczb", a, " i ", b, "wynosi: ", a + b)
+# elif c == "-" :
+#     print("wynik odejmowania liczb", a, " i ", b, "wynosi: ", a - b)
+# elif c == ":" :
+#     print("wynik dzielenia liczb", a, " i ", b, "wynosi: ", a / b)
+# elif c == "*" :
+#     print("wynik mnożenia liczb", a, " i ", b, "wynosi: ", a * b)
+# else:
+#     print("wpisałeś błędny znak")
+
+# a = float(input("wpisz swoją temperaturę: "))
+# b = input("napisz czy twoja temperatura jest w stopniach celcjusza (C) czy w farenhajtach (F): ")
+#
+# if b == "C":
+#     d = a * 2 + 30
+#     print("twoja temperatura podana w farenhajtach wynosi: " , d, " °F")
+# elif b == "F":
+#     d = (a - 30) / 2
+#     print("twoja temperatura podana w celcjuszach wynosi: ", d, " °C")
+
+==================================================================================FOR=====================================================================
+# suma = 0
+# for x in range(2, 101, 2):
+#     suma += x
+# print(suma)
+
+# a = int(input("wpisz pierwszą liczbę: "))
+# b = int(input("wpisz drugą liczbę: "))
+# c = int(input("wpisz trzecią liczbę: "))
+# d = int(input("wpisz czwartą liczbę: "))
+# e = int(input("wpisz piątą liczbę: "))
+#
+# f = 0
+# g = 0
+#
+# if a % 2 == 0:
+#     print(a, "jest patrzyste")
+#     f += 1
+# else:
+#     print(a, "jest nieparzyste")
+#     g += 1
+# if b % 2 == 0:
+#     print(b, "jest patrzyste")
+#     f += 1
+# else:
+#     print(b, "jest nieparzyste")
+#     g += 1
+# if c % 2 == 0:
+#     print(c, "jest patrzyste")
+#     f += 1
+# else:
+#     print(c, "jest nieparzyste")
+#     g += 1
+# if d % 2 == 0:
+#     print(d, "jest patrzyste")
+#     f += 1
+# else:
+#     print(d, "jest nieparzyste")
+#     g += 1
+# if e % 2 == 0:
+#     print(e, "jest patrzyste")
+#     f += 1
+# else:
+#     print(e, "jest nieparzyste")
+#     g += 1
+#
+# print(f"liczb parzystych było {f} a liczb niepatrzystych było {g}")
+
+# suma = 0
+# for x in range(1, 100):
+#     suma = x ** x
+# print(suma)
+
+# suma = 0
+# for x in range(1, 64):
+#     suma = 2 ** x
+# print(suma)
+
+# a = int(input("wpisz pierwszą liczbę: "))
+# b = int(input("wpisz drugą liczbę: "))
+# c = 0
+# d = 0
+# wow = range(a, b + 1)
+#
+# if a > b:
+#     print("liczba a jest mniejsza od liczby b")
+# else:
+#     for x in wow:
+#         if x % 2 != 0:
+#             c += x
+#     print(c)
+
+# a = int(input("napisz dowolną liczbę z klawiatury: "))
+# wow = range(1, a + 1)
+# if a > 1:
+#     for x in wow:
+#         for i in range(1, x + 1):
+#             print(i, end=" ")
+#         print()
+
+# n = int(input("wpisz liczbe naturalną n: "))
+# if n > 0:
+#     suma = 0.0
+#     for x in range (n):
+#         y = float(input(f"podaj {x+1} liczbe rzeczywistą: "))
+#         suma += y
+#     print("suma wynosi: ", suma)
+#
+
+n = int(input("wpisz liczbe naturalną n: "))
+if n > 0:
+    suma = 0.0
+    for x in range (n):
+        y = float(input(f"podaj {x+1} liczbe rzeczywistą: "))
+        if y % 3 == 0 and y % 5 != 0:
+            print("liczba", y, "jest podzielna przez 3 a nie podzielna przez 5")
+
+==============================================================================================WHILE===========================================================
+
+# a = input('wpisz znak: ')
+#
+# while a != 'x':
+#     a = input('wpisuj inny znak: ')
+# print("zgadłeś")
+
+
+# a = 0
+# while a > 10 or a < 1:
+#     a = int(input("wpisz liczbę z przedziału innego niz od 1 do 10: "))
+#     c = 2 * a
+#     print("podwójna wartosc tej liczby wynosi: ", c)
+#
+# print("wpisales liczbe z przedzialu od 1 do 10")
+#
+#
+
+# a = int(input("wpisz 1 liczbę całkowitą: "))
+# while a < 0:
+#     print("twoja liczba jest mniejsza od zera.")
+#     a = int(input("wpisz swoja liczbe ponownie "))
+# b = int(input("wpisz 2 liczbę całkowitą: "))
+# while b < 0:
+#     print("twoja liczba jest mniejsza od zera.")
+#     b = int(input("wpisz swoja liczbe ponownie "))
+# c = int(input("wpisz 3 liczbę całkowitą: "))
+# while c < 0:
+#     print("twoja liczba jest mniejsza od zera.")
+#     c = int(input("wpisz swoja liczbe ponownie "))
+# if a != 0:
+#     print("twoja pierwsza liczba wynosi: ", a )
+# else:
+#     print("twoja pierwsza liczba wynosi zero")
+# if b != 0:
+#     print("twoja druga liczba wynosi: ", b )
+# else:
+#     print("twoja druga liczba wynosi zero")
+# if c != 0:
+#     print("twoja trzecia liczba wynosi: ", c )
+# else:
+#     print("twoja trzecia liczba wynosi zero")
+
+# import random
+#
+# a = random.randint(1,101)
+#
+# b = int(input("zgadnij liczbę a: "))
+# while a != b:
+#     if a > b:
+#         print("twoja liczba jest za mala, próbuj dalej")
+#     elif a == b:
+#         break
+#     else:
+#         print("twoja liczba jest za duża, próbuj dalej")
+#     b = int(input("zgadnij liczbę a: "))
+#
+# print("zgadłeś!")
+
+# m = int(input("wpisz naturalną liczbę m, większą od 2: "))
+# b = 3
+# if m <= 2:
+#     print("twoja podana liczba nie jest liczba naturalną, albo nie jest większa od 2: ")
+# else:
+#     while m > b:
+#         b *= 3
+#         if b < m:
+#             print("liczba ", b, "jest mniejsza od liczby ", m)
+#             continue
+#         else:
+#             print("liczba ", b, "jest większa od liczby ", m)
+
+# i = 0
+# while i < 3:
+#     i += 1
+#     a = int(input("wpisz numer swojego miesiąca: "))
+#     if a in range(1,13):
+#         break
+#     elif i < 3:
+#         print("wpisz poprawy numer miesiąca")
+# if i == 3:
+#     print("przekroczyles ilosc prób")
+# else:
+#     print("wpisales poprawy miesiąc")
+
+
+
+
+
+===================================================================funkcje============================================================
+
+# def wow(x, y):
+#     if y != 0:
+#         c = x / y
+#         print("wynik dzielenia",x,'przez',y,"wynosi",c)
+#     else:
+#         return print("nie można dzielić przez zero!")
+#
+# wow(5.0,2)
+# wow(3,0)
+#
+# def wow1(x, y):
+#     if y != 0:
+#         c = x / y
+#         return c
+#     else:
+#         return "nie można dzielić przez zero!"
+#
+# d = wow1(5.0,2)
+# e = wow1(3,0)
+#
+# print(d)
+# print(e)
+# from itertools import count
+
+
+# def temperatura(x, y):
+#     if y == "C":
+#         c = x * 2 + 32
+#         return c
+#     elif y == "F":
+#         c = (x - 32) / 2
+#         return c
+#     else:
+#         return "podałeś złą jednostkę temperatury!"
+#
+# g = temperatura(32,"C")
+# h = temperatura(153,"F")
+# j = temperatura(2137,"papaj")
+#
+# print(g)
+# print(h)
+# print(j)
+
+# def liczba(x):
+#     i = 1
+#     while x > 10:
+#         i += 1
+#         x = x / 10
+#     return i
+#
+# print(liczba(432452))
+
+
+# def pierwsza(x):
+#     if x <= 1:
+#         return 0
+#     for i in range(2,x):
+#         if x % i == 0:
+#             return 0
+#     return 1
+#
+# def main(x):
+#     if pierwsza(x) == 1:
+#         print("liczba",x,"jest liczbą pierwszą")
+#     else:
+#         print("liczba",x,"nie jest liczbą pierwszą")
+#
+# main(34)
+
+# def kwadrat(a,b,c):
+#     if a == 0:
+#         return "to nie jest równanie kwadratowe"
+#     delta = b * b + 4 * a * c
+#     if delta > 0:
+#         x1 = (-b + delta **(1/2))/2 * a
+#         x2 = (-b - delta **(1/2))/2 * a
+#         return x1, x2
+#     elif delta == 0:
+#         x0 = -b/2 * a
+#         return x0
+#     else:
+#         real_part = -b / (2 * a)  # Część rzeczywista
+#         imaginary_part = ((-delta) ** 0.5) / (2 * a)  # Część urojona
+#         x1 = f"{real_part} + {imaginary_part}i"
+#         x2 = f"{real_part} - {imaginary_part}i"
+#         return x1, x2
+#
+# def main():
+#     wynik = kwadrat(2,5,35)
+#     print(wynik)
+# main()
+
+# def gmean(*args):
+#     wynik = 1
+#     for arg in args:
+#         wynik *= arg
+#     srednia = wynik ** (1/len(args))
+#     return srednia
+#
+# print(gmean(1,2,3,4))
+
+# def ala(*args):
+#     for i in range(1,len(args) + 1):
+#         for j in range(i):
+#             print(args[j], end=" ")
+#         print()
+# ala(1,'ala',13)
+
+# def ala(*args):
+#         for arg in range(len(args)):
+#             for _ in range(arg + 1):
+#                 print(args[arg], end=" ")
+#             print()
+#
+# ala(1,'ala',13)
+
+# def my_max(x, y):
+#     if x > y:
+#         print("liczba", x, "jest większa od ", y)
+#     else:
+#         print("liczba", y, "jest większa od ", x)
+#
+# my_max(2,3)
+#
+# def my_max(x, y, z, c, v):
+#     my_max = x
+#     if y > my_max:
+#         my_max = y
+#     if z > my_max:
+#         my_max = z
+#     if c > my_max:
+#         my_max = c
+#     if v > my_max:
+#         my_max = v
+#
+#     return my_max
+#
+#
+# s = my_max(14,15,2, 123, 1)
+# print("największą liczbą jest:",s)
+
+# def fibonacci(n):
+#     if n == 0:
+#         return 0
+#     if n == 1:
+#         return 1
+#     a, b = 1, 1
+#     for i in range(n - 1):
+#         b += a
+#         a = b - a
+#     return a
+#
+# print(fibonacci(3))
+
+# def silnia(x):
+#     for i in range(1, x + 1):
+#         wynik = n * i
+#         return wynik
+
+from operator import truediv
+
+
+# def pierwsza(n):
+#     if n <= 1:
+#         return 0
+#     for i in range(2,n):
+#         if n % i == 0:
+#             return 0
+#     return 1
+#
+# def main(n):
+#     if pierwsza(n) == 1:
+#         print("liczba",n,"jest liczbą pierwszą")
+#     else:
+#         print("liczba",n ,"nie jest liczbą pierwszą")
+#
+# main(int(input("wpisz liczbe: ")))
+#
+# def blizniacze(n = 1000):
+#     if pierwsza(n - 3) == 1 and pierwsza(n - 1) == 1:
+#         print(f"liczba {n - 3} oraz {n - 1} są liczbami bliźniaczymi")
+#     else:
+#         print(f"liczba {n - 3} oraz {n - 1} nie są liczbami bliźniaczymi")
+#
+# blizniacze(1000)
+#
+# def pierwsza(n):
+#     if n <= 1:
+#         return 0
+#     for i in range(2,n):
+#         if n % i == 0:
+#             return 0
+#     return 1
+#
+# def blizniacze(n = 1000):
+#     for n in range(n, 0, -1):
+#         if pierwsza(n - 3) == 1 and pierwsza(n - 1) == 1:
+#             print(f"liczba {n - 3} oraz {n - 1} są liczbami bliźniaczymi")
+#             break
+#
+# blizniacze(2000)
+#
+# def doslonala(n):
+#     s = [1] * (n + 1)
+#     x = 2
+#     while x <= n:
+#         if s[n] == n:
+#             print(n, "to ejst numer perfektycjny")
+#     kn = 2 * n
+#     while kn <= n:
+#         s[kn] += n
+#         kn += n
+#     n += 1
+#
+# doslonala(2)
+#
+# def potega(x, n):
+#     if n == 0:
+#         return 1
+#     elif n == 1:
+#         return x
+#     elif n % 2 != 0:
+#         wynik = x * potega(x, n - 1)
+#         return wynik
+#     else:
+#         wynik1 = potega(x, n / 2) * potega(x, n / 2)
+#         return wynik1
+#
+# print(potega(5,5))
+#
+# def doskonala(n):
+#     i = 1
+#     zmienne = 0
+#     while i < n:
+#         i += 1
+#         if n % i == 0:
+#             x = n / i
+#             print(int(x), end=" ")
+#
+# doskonala(28)
+
+
+=============================================kolos 1============================================
+
+# obliczanie n dla dowolnej ilosci liczb a
+
+# a = int(input("Wpisz dowolną liczbę: "))
+# b = 0
+#
+# for i in range(a):
+#     x = float(input(f"wpisz {i + 1} liczbę n: "))
+#     b += x ** 3
+#
+# print(b)
+
+# pobieranie liczby calkowitej z klawiatury dopóki nie będzie ujemna
+
+# a = int(input("wpisz dowolną liczbę: "))
+# b = 0
+# if a > 0:
+#     while a > 0:
+#         b += a ** 2
+#         a = int(input("wpisz dowolną liczbę: "))
+#     if a < 0:
+#         b += a ** 2
+#     print("Suma kwadratów twoich liczb wynosi:", b)
+# else:
+#     b = a ** 2
+#     print("kwadrat twojej liczby wynosi: ", b)
+
+# program mnozący 2 liczby:
+
+# def iloczyn(x,y):
+#     return x * y
+# b = iloczyn(int(input("wpisz 1 liczbę: ")),int(input("wpisz 2 liczbę: ")))
+# print(b)
+
+#zdefiniowanie zmiennej:
+
+tekst = str("W roku Pańskim 1345, władca Henryk 12, na rzecz swoich 14209 poddanych uchwalil dekret o 20%ej zniżce podatków")
+
+# napisz funkcję, któa zwróci zaszyfrowany tekst. Zasada szyfrowania: kod ASCII każdego znaku zmniejszamy o konkretną liczbę
+
+# def func_(*args):
+#     b = 1
+#     for i in args:
+#         b *= i
+#     return b
+# print(func_(2,2,2))
+
+# napisz funkcje która zmniejsza kod ascii znaków
+
+# def encrypt_text(text, shift):
+#     encrypted = ''.join([chr(ord(ch) - shift) for ch in text])
+#     return encrypted
+#
+# text = input("Podaj tekst do zaszyfrowania: ")
+# shift = int(input("Podaj wartość przesunięcia ASCII: "))
+#
+# print("Zaszyfrowany tekst:", encrypt_text(text, shift))
+
+#napisz funkcje, która wylicza iloczyn niezerowych cyfr podanej jako parametr liczby całkowitej
+
+# def iloczyn_(a):
+#     b = 1
+#     while a > 0:
+#         liczba = a % 10
+#         if liczba != 0:
+#             b *= liczba
+#         a //= 10
+#     return b
+#
+# print(iloczyn_(305))
+
+#dziwne zadanie z trójkątem
+
+# def is_triangle(a, b, c):
+#     return a + b > c and a + c > b and b + c > a
+#
+#
+# while True:
+#     a = float(input("Podaj pierwszą stronę trójkąta: "))
+#     b = float(input("Podaj drugą stronę trójkąta: "))
+#     c = float(input("Podaj trzecią stronę trójkąta: "))
+#
+#     if a > 0 and b > 0 and c > 0:
+#         break
+#     else:
+#         print("Wszystkie liczby muszą być dodatnie!")
+#
+# if is_triangle(a, b, c):
+#     print("Podane liczby mogą być stronami trójkąta.")
+# else:
+#     print("Podane liczby nie mogą być stronami trójkąta.")
+
+=======================================================================kolos 2=====================================================
