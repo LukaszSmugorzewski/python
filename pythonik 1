@@ -634,6 +634,10 @@ if any(i % 2 == 0 for i in lista):
 #zdefiniuj zmienna costam i usunac wszystko oprocz liczby i pokazac co 3 znak w owdrotnym porządku
 
 tekst = str("W roku Pańskim 1345, władca Henryk 12, na rzecz swoich 14209 poddanych uchwalil dekret o 20%ej zniżce podatków")
+bez_liter_i_spacji = ''.join(c for c in tekst if not c.isalpha() and not c.isspace())
+wynik = bez_liter_i_spacji[::-3]
+
+print(wynik)
 
 # napisz funkcje która zwieksza kod ascii znaków
 
@@ -759,6 +763,10 @@ tekst = str("W roku Pańskim 1345, władca Henryk 12, na rzecz swoich 14209 podd
 #zdefiniowanie zmiennej:
 
 tekst = str("W roku Pańskim 1345, władca Henryk 12, na rzecz swoich 14209 poddanych uchwalil dekret o 20%ej zniżce podatków")
+bez_liter_i_spacji = ''.join(c for c in tekst if not c.isalpha() and not c.isspace())
+wynik = bez_liter_i_spacji[::2]
+
+print(wynik)
 
 # napisz funkcję, któa zwróci zaszyfrowany tekst. Zasada szyfrowania: kod ASCII każdego znaku zmniejszamy o konkretną liczbę
 
@@ -815,6 +823,128 @@ iloczyn(0)
 #     print("Podane liczby mogą być stronami trójkąta.")
 # else:
 #     print("Podane liczby nie mogą być stronami trójkąta.")
+
+
+=======================================================================kolos 4=========================================
+
+#narysuj trójkąt z * 
+
+# def trójkąt(x):
+#     for i in range(x + 1):
+#         print('*' * i, end="\n")
+# 
+# trójkąt(3)
+
+# obliczanie n + 1 dla dowolnej ilosci liczb a
+
+# a = int(input("Wpisz dowolną liczbę: "))
+# b = 0
+# 
+# for i in range(a):
+#     x = float(input(f"wpisz {i + 1} liczbę n: "))
+#     b += (x + 1)
+# 
+# print(b)
+
+# krojenie stringów
+
+# napisz funkcje, która zwróci zaszyfrowany tekst. zasada szyfrowania: przestawiamy znaki w tekscie 1-2 3-4 5-6
+
+#def zaszyfruj_tekst(tekst):
+#     zaszyfrowany = ""
+#     for i in range(0, len(tekst) - 1, 2):
+#         zaszyfrowany += tekst[i + 1]
+#         zaszyfrowany += tekst[i]
+# 
+#     if len(tekst) % 2 != 0:
+#         zaszyfrowany += tekst[-1]
+# 
+#     return zaszyfrowany
+# 
+# tekst = "abcdefgh"
+# zaszyfrowany = zaszyfruj_tekst(tekst)
+# print("Zaszyfrowany tekst:", zaszyfrowany)
+
+#funkcja wypisuje maksimum z 3 liczb
+
+# def my_max(x,y,z):
+#     if x > y and x > z:
+#         print(f"liczba {x} jest maksimum")
+#     elif y > z and y > x:
+#         print(f"liczba {y} jest maksimum")
+#     else:
+#         print(f"liczba {z} jest maksimum")
+# 
+# my_max(31,52,12)
+
+#napisz funkcje, która zwraca iloczyn dowolnej ilosci podanych liczb jako argument
+
+# def func_3(*args):
+#     b = 1
+#     for i in args:
+#         b *= i
+#     return b
+# print(func_3(5,2,7))
+
+# napisz funkcje, która wylicza ilosc zerowych i nie zerowych liczb calkowitych podanej jako parametr
+
+def policz_liczby_w_calkowitej(liczba):
+    # Inicjalizujemy liczniki
+    zerowe = 0
+    niezerowe = 0
+
+    # Obsługa liczby ujemnej
+    liczba = abs(liczba)
+
+    # Przechodzimy przez każdą cyfrę liczby
+    while liczba > 0:
+        cyfra = liczba % 10  # Pobieramy ostatnią cyfrę liczby
+        if cyfra == 0:
+            zerowe += 1
+        else:
+            niezerowe += 1
+        liczba //= 10  # Usuwamy ostatnią cyfrę liczby
+
+    return zerowe, niezerowe
+
+# Przykład użycia
+liczba = 1049320
+zerowe, niezerowe = policz_liczby_w_calkowitej(liczba)
+print("Liczba zerowych:", zerowe)
+print("Liczba niezerowych:", niezerowe)
+
+# Napisz funkcję, która zwraca pole koła. Jako argumenty musi pobierać jedną liczbę a i jedną literę r (radius – promień) albo d (diameter – średnica).
+# Jeżeli litera jest r, to funkcja zwraca pole koła o promieniu a, jeżeli d, to pole koła o średnicy a. W głównym programie pobieraj w pętli znak i liczbę,
+# dopóki znak nie będzie r lub d, a liczba – dodatnia. Potem policz odpowiednie pole.
+
+# def pole_kola(a, r_or_d):
+#     pi = 3.1415926  # Wartość liczby pi
+# 
+#     # Jeśli argument to promień
+#     if r_or_d == 'r':
+#         return pi * a ** 2
+#     # Jeśli argument to średnica
+#     elif r_or_d == 'd':
+#         return (pi * (a / 2) ** 2)
+# 
+# # Główny program
+# while True:
+#     znak = input("Podaj znak ('r' dla promienia, 'd' dla średnicy): ").strip().lower()
+#     liczba = input("Podaj liczbę: ").strip()
+# 
+#     # Sprawdzamy poprawność wprowadzonego znaku i liczby
+#     if (znak == 'r' or znak == 'd') and liczba.replace('.', '', 1).isdigit():
+#         liczba = float(liczba)
+#         if liczba > 0:
+#             break
+#         else:
+#             print("Liczba musi być dodatnia.")
+#     else:
+#         print("Błędne dane, spróbuj ponownie.")
+# 
+# # Obliczamy pole
+# wynik = pole_kola(liczba, znak)
+# print(f"Pole koła wynosi: {wynik:.4f}")
 
 
 
