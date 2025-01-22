@@ -713,17 +713,114 @@ print(wynik)
 ==================================================kolos 2==========================================
 
 
+ #zad1
+#m = int(input("podaj x: "))
+#n = int(input("podaj y: "))
+#for i in range(n):
+#    for j in range(m):
+#        print("*",end=" ")
+#    print("")
+#zad2
+#n = int(input("podaj n:"))
+#for i in range(0,n):
+#    i = float(i)
+#    i+=1
+#    i*=i
+#    print(i)
+#zad 3
+#
+# tekst = 'W Roku Pańskim 1345, władca Henryk 12, na rzecz swoich 143209 poddanych uchwalił dekret o 20%ej zniżce podatków!'
+# nowy_tekst = ''
+# nowy_tekst2 = ''
+# lista = []
+# for i in range(len(tekst)):
+#         if not (tekst[i].isspace() or tekst[i].isalpha()):
+#             nowy_tekst2 += tekst[i]
+# print(nowy_tekst2)
+# for j in range(len(nowy_tekst2)):
+#     if j % 2 == 0:
+#         nowy_tekst = nowy_tekst2[::2]
+# print(nowy_tekst)
+
+#zad 4
+
+# def mini_szyfrowanie(tekst):
+#     zaszyfrowany_tekst = ""
+#     for i in range(0, len(tekst) - 1, 2):
+#         zaszyfrowany_tekst += tekst[i + 1] + tekst[i]
+#     if len(tekst) % 2 != 0:
+#         zaszyfrowany_tekst += tekst[-1]
+#     return zaszyfrowany_tekst
+# tekst = "przyklad"
+# zaszyfrowany = mini_szyfrowanie(tekst)
+# print("Tekst oryginalny:", tekst)
+# print("Tekst zaszyfrowany:", zaszyfrowany)
+
+#zad5
+#def my_min(x,y,z):
+#    if x < y and x < z:
+#        return x
+#    if y < x and y < z:
+#        return y
+#    if z < x and z < y:
+#        return z
+#print("najmniejsza liczba to: ",my_min(1, 2, 3))
+
+#zad 6
+# def func_3(*args):
+#    wynik = 0
+#    for arg in args:
+#        int(arg)
+#        arg**=2
+#        wynik +=arg
+#    return wynik
+# print(func_3(5,-1,7))
+
+#zad7
+# def odwroc_liczbe(liczba):
+#     odwrocona = 0
+#     while liczba > 0:
+#         ostatnia_cyfra = liczba % 10
+#         odwrocona = odwrocona * 10 + ostatnia_cyfra
+#         liczba = liczba // 10
+#     return odwrocona
+# liczba = int(input("Podaj liczbę: "))
+# odwrocona_liczba = odwroc_liczbe(liczba)
+# print("Liczba po odwrocie:", odwrocona_liczba)
 
 
+# Napisz funkcję, która zwraca pole koła. Jako argumenty musi pobierać jedną liczbę a i jedną literę r (radius – promień) albo d (diameter – średnica).
+# Jeżeli litera jest r, to funkcja zwraca pole koła o promieniu a, jeżeli d, to pole koła o średnicy a. W głównym programie pobieraj w pętli znak i liczbę,
+# dopóki znak nie będzie r lub d, a liczba – dodatnia. Potem policz odpowiednie pole.
 
-
-
-
-
-
-
-
-
+# def pole_kola(a, r_or_d):
+#     pi = 3.1415926  # Wartość liczby pi
+# 
+#     # Jeśli argument to promień
+#     if r_or_d == 'r':
+#         return pi * a ** 2
+#     # Jeśli argument to średnica
+#     elif r_or_d == 'd':
+#         return (pi * (a / 2) ** 2)
+# 
+# # Główny program
+# while True:
+#     znak = input("Podaj znak ('r' dla promienia, 'd' dla średnicy): ").strip().lower()
+#     liczba = input("Podaj liczbę: ").strip()
+# 
+#     # Sprawdzamy poprawność wprowadzonego znaku i liczby
+#     if (znak == 'r' or znak == 'd') and liczba.replace('.', '', 1).isdigit():
+#         liczba = float(liczba)
+#         if liczba > 0:
+#             break
+#         else:
+#             print("Liczba musi być dodatnia.")
+#     else:
+#         print("Błędne dane, spróbuj ponownie.")
+# 
+# # Obliczamy pole
+# wynik = pole_kola(liczba, znak)
+# print(f"Pole koła wynosi: {wynik:.4f}")
 
 =============================================kolos 3============================================
 
@@ -823,6 +920,7 @@ iloczyn(0)
 #     print("Podane liczby mogą być stronami trójkąta.")
 # else:
 #     print("Podane liczby nie mogą być stronami trójkąta.")
+
 
 
 =======================================================================kolos 4=========================================
