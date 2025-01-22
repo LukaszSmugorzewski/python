@@ -498,8 +498,230 @@ from operator import truediv
 #
 # doskonala(28)
 
+===========================================STRINGI===============================================
 
-=============================================kolos 1============================================
+napisz = "Skoda Octavia 4  Rok 2021 przebieg 110500km  2.0tdi 115hp ( po programie na 166hp)  Auto sprowadzone z Austrii osobiście w lipcu 2024."
+print(len(napisz))
+print(napisz[12])
+print(napisz[14])
+print(napisz[-4])
+print(napisz[12], napisz[14], napisz[-4], sep="")
+
+print(napisz * 2)
+print(napisz + '2')
+# print(napisz - '2')
+# print(napisz % 2)
+
+print(napisz.lower())
+
+    a = "Łukasz Smugorzewski"
+    b = a[0:6]
+    c = a[7:]
+
+    print(b), print(c)
+
+    print(c, b)
+
+    print(b[0]+c[0])
+    print(b.replace('Ł',"S"), c.replace("S","Ł"))
+
+# CO DRUGI ZNAK
+
+# def napis(x):
+#     return x[::2]
+#
+# x = input("napisz swój ciąg znaków: ")
+# print(napis(x))
+
+# ODWRÓCENIE x LICZ
+
+# def napis(p,x = 1):
+#     return p[-x:]
+#
+# x = input("napisz swój ciąg znaków: ")
+# print(napis(x))
+
+#ODWRACANIE CALEGO STRINGA
+
+# def napis(p):
+#     return p[::-1]
+#
+# p = input("napisz ile znakow ma zwrocic: ")
+# print(napis(p))
+
+#PALINDROMY
+#
+# def napis(p):
+#     a = p[::-1].strip()
+#     if a == p:
+#         print(f"twoje zdanie {p} jest palindromem")
+#     else:
+#         print(f"twoje zdanie {p} nie jest palindromem")
+
+napis("wow mega")
+
+# def napis(p,x):
+#     a = p.count(x)
+#     return a
+#
+# p = input("napisz swój napis: ")
+# x = input("napisz jaką litere mamy sprawdzić: ")
+# print("twoja litera wystąpiłą", napis(p,x),"razy")
+
+lista = list(range(10))
+
+print(lista)
+
+nowa = [i * 2 for i in lista]
+nowa2 = [i + 1 for i in lista if i % 2 == 1]
+print(nowa)
+print(nowa2)
+
+# formatowanie ciągów string
+
+argumenty = ["sebastian", 24]
+tekst = "Cześć mam na imię {imie} i mam {wiek} lat. {imie}".format(imie = argumenty[0], wiek = argumenty[1])
+
+print(tekst)
+
+print(", ".join(["a", "b", "c"]))
+print("Witaj świecie".replace("Witaj", "cześć"))
+print("To jest zdanie".startswith("To"))
+print("To jest zdanie".endswith("e"))
+print("jest" in "To jest zdanie")
+print("To jest zdanie.".upper())
+print("To jest zdanie.".lower())
+
+print("----------")
+lista = [10, 20, 25, 35, 40]
+
+if all(i % 2 == 0 for i in lista):
+    print("Wszystkie parzyste")
+
+if any(i % 2 == 0 for i in lista):
+    print("chociaż 1 parzysta")
+
+    for i in enumerate(lista):
+        print(i[0] + 1,'-', i[1])
+
+============================================kolos 1==============================================
+
+# obliczanie n dla dowolnej ilosci liczb a
+
+# a = int(input("Wpisz dowolną liczbę: "))
+# b = 0
+#
+# for i in range(a):
+#     x = float(input(f"wpisz {i + 1} liczbę n: "))
+#     b += x ** 2
+#
+# print(b)
+
+# pobieranie liczby calkowitej z klawiatury dopóki nie będzie wieksza lub zerem
+
+# a = int(input("wpisz dowolną liczbę: "))
+# b = 1
+# if a <= 0:
+#     while a <= 0:
+#         b *= a
+#         a = int(input("wpisz dowolną liczbę: "))
+#     if a < 0:
+#         b *= a
+#     print("iloczyn twoich liczb wynosi:", b)
+# else:
+#     print("iloczyn z twojej liczby wynosi: ", a)
+
+#zdefiniuj zmienna costam i usunac wszystko oprocz liczby i pokazac co 3 znak w owdrotnym porządku
+
+tekst = str("W roku Pańskim 1345, władca Henryk 12, na rzecz swoich 14209 poddanych uchwalil dekret o 20%ej zniżce podatków")
+
+# napisz funkcje która zwieksza kod ascii znaków
+
+# def encrypt_text(text, shift):
+#     encrypted = ''.join([chr(ord(ch) + shift) for ch in text])
+#     return encrypted
+# 
+# text = input("Podaj tekst do zaszyfrowania: ")
+# shift = int(input("Podaj wartość przesunięcia ASCII: "))
+# 
+# print("Zaszyfrowany tekst:", encrypt_text(text, shift))
+
+#napisz funkcje, która zwraca maximum z warotści bezwględnych dwóch liczb zmiennoprzecinkowych
+
+# def bezwzględna(x,y):
+#     a = x
+#     b = y
+#     if x > 0:
+#         x = x
+#     elif x < 0:
+#         x = -x
+#     if y > 0:
+#         y = y
+#     elif y < 0:
+#         y = -y
+#     if x > y:
+#         return f"liczba {a} jest maximum"
+#     else:
+#         return f"liczba {b} jest maximum"
+# 
+# print(bezwzględna(float(4),float(-5.34)))
+
+#napisz funkcje, która zwraca iloczyn kwadratów dowolnej ilosci podanych liczb jako argument
+
+# def func_(*args):
+#     b = 1
+#     for i in args:
+#         b *= i * 2
+#     return b
+# print(func_(2,2,2))
+
+# program sumujący liczby:
+
+# def suma(x):
+#     wynik = 0
+#     for i in range(x + 1):
+#         if i > 0:
+#             wynik += i
+#     print(wynik)
+# 
+# suma(4)
+
+# def is_triangle(a, b, c):
+#     return a + b > c and a + c > b and b + c > a
+#
+#
+# while True:
+#     a = float(input("Podaj pierwszą stronę trójkąta: "))
+#     b = float(input("Podaj drugą stronę trójkąta: "))
+#     c = float(input("Podaj trzecią stronę trójkąta: "))
+#
+#     if a > 0 and b > 0 and c > 0:
+#         break
+#     else:
+#         print("Wszystkie liczby muszą być dodatnie!")
+#
+# if is_triangle(a, b, c):
+#     print("Podane liczby mogą być stronami trójkąta.")
+# else:
+#     print("Podane liczby nie mogą być stronami trójkąta.")
+
+
+==================================================kolos 2==========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=============================================kolos 3============================================
 
 # obliczanie n dla dowolnej ilosci liczb a
 
@@ -540,15 +762,6 @@ tekst = str("W roku Pańskim 1345, władca Henryk 12, na rzecz swoich 14209 podd
 
 # napisz funkcję, któa zwróci zaszyfrowany tekst. Zasada szyfrowania: kod ASCII każdego znaku zmniejszamy o konkretną liczbę
 
-# def func_(*args):
-#     b = 1
-#     for i in args:
-#         b *= i
-#     return b
-# print(func_(2,2,2))
-
-# napisz funkcje która zmniejsza kod ascii znaków
-
 # def encrypt_text(text, shift):
 #     encrypted = ''.join([chr(ord(ch) - shift) for ch in text])
 #     return encrypted
@@ -558,18 +771,29 @@ tekst = str("W roku Pańskim 1345, władca Henryk 12, na rzecz swoich 14209 podd
 #
 # print("Zaszyfrowany tekst:", encrypt_text(text, shift))
 
+#napisz funkcje, która zwraca iloczyn dowolnej ilosci podanych liczb jako argument
+
+# def func_(*args):
+#     b = 1
+#     for i in args:
+#         b *= i
+#     return b
+# print(func_(2,2,2))
+
 #napisz funkcje, która wylicza iloczyn niezerowych cyfr podanej jako parametr liczby całkowitej
 
-# def iloczyn_(a):
-#     b = 1
-#     while a > 0:
-#         liczba = a % 10
-#         if liczba != 0:
-#             b *= liczba
-#         a //= 10
-#     return b
-#
-# print(iloczyn_(305))
+def iloczyn(x):
+    if x == 0:
+        print("iloczyn z 0 wynosi 0")
+    else:
+        suma = 1
+        for i in range(x + 1):
+            if i > 0:
+                suma *= i
+        print(suma)
+
+iloczyn(0)
+
 
 #dziwne zadanie z trójkątem
 
@@ -592,4 +816,5 @@ tekst = str("W roku Pańskim 1345, władca Henryk 12, na rzecz swoich 14209 podd
 # else:
 #     print("Podane liczby nie mogą być stronami trójkąta.")
 
-=======================================================================kolos 2=====================================================
+
+
