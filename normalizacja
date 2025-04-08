@@ -1,0 +1,60 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+print("zadanie 1")
+# okej = np.random.randint(0, 101, size=(30, 5))
+# df = pd.DataFrame(okej, columns=['Matematyka','Chemia','Fizyka','Biologia','Informatyka'])
+# df['średnia'] = df.mean(axis = 1)
+# df.to_excel('oceny.xlsx', index=False)
+
+print("zadanie 2")
+
+data = {    'Student': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Hannah', 'Isaac', 'Jack'],
+            'Punktacja [%]': [85, 90, 78, np.nan, 88, 76, 92, np.nan, 80, 84],
+            'Frekwencja [%]': [95, 85, np.nan, 75, 88, 92, 89, 80, np.nan, 91],
+            'Zaj_dodatkowe': [True, True, False, True, False, False, False, True, False, False]}
+df = pd.DataFrame(data)
+nowystudent = ['Maria', 93.0, 75.0, True]
+df.loc[len(df)] = nowystudent
+df.loc[df['Student'] == 'Frank', 'Zaj_dodatkowe'] = True
+df.loc[pd.isna(df['Punktacja [%]']), 'Punktacja [%]'] = 100
+df.loc[pd.isna(df['Frekwencja [%]']), 'Frekwencja [%]'] = 100
+#print(df)
+df.to_csv('new_data.csv', index=False)
+
+punkty = df[
+    (df["Punktacja [%]"] > 85)
+]
+print(punkty)
+
+frekwencja = round(df["Frekwencja [%]"].mean(), 2)
+
+print('\n', frekwencja)
+
+segregacja1 = df.sort_values("Punktacja [%]", ascending=True)
+segragacja2 = df.sort_values("Frekwencja [%]", ascending=False)
+#lub df.to_csv("new_data2.csv", index=False)
+
+print('\n', segregacja1)
+print('\n', segragacja2)
+
+mediana = df.groupby('Zaj_dodatkowe')['Frekwencja [%]'].median()
+
+print('\n', mediana)
+
+punktacja_min = np.min(df["Punktacja [%]"])
+punktacja_max = np.max(df["Punktacja [%]"])
+
+df["Punktacja_norm"] = (df["Punktacja [%]"] - punktacja_min) / (punktacja_max - punktacja_min)
+plt.plot(df["Student"], df["Punktacja_norm"], marker='o', linestyle='-', color='b')
+
+plt.title("Normalizacja punktacji studentów", fontsize=14)
+plt.xlabel("Student", fontsize=12)
+plt.ylabel("Normalizowana punktacja", fontsize=12)
+
+plt.grid(True)
+
+plt.xticks(rotation=45)
+
+plt.tight_layout()  
+plt.show()
